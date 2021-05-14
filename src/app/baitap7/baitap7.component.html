@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <h1 class="text-center mb-5">Quản Lý Danh Mục Sản Phẩm</h1>
+    <input [(ngModel)]="tenSP" class="mr-5" type="text" placeholder="Tên Sản Phẩm" name="" id="">
+    <input [(ngModel)]="maSP" class="mr-5" type="text" placeholder="Mã Sản Phẩm" name="" id="">
+    <input [(ngModel)]="giaSP" class="mr-5" type="text" placeholder="Giá Sản Phẩm" name="" id="">
+    <button (click)="onCreacteProduct()" class="btn btn-outline-danger">Thêm Sản Phẩm</button>
+</div>
+<div class="container">
+    <h1 class="text-center">Danh Mục Sản Phẩm</h1>
+    <table class="table table-hover">
+        <thead class="thead-inverse">
+            <tr>
+                <th>STT</th>
+                <th>Mã Sản Phẩm</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Giá Sản Phẩm</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of arrProduct | paginate: { itemsPerPage: 3, currentPage: page };let i = index">
+                <th>{{i+1}}</th>
+                <td>{{item.MaSP}}</td>
+                <td>{{item.TenSP}}</td>
+                <td>{{item.Gia}}</td>
+                <td><button (click)="onDeleteProduct(item.MaSP)" class="btn btn-warning">Xóa</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>

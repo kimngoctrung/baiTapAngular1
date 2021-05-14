@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  /* width: 70%; */
+}
+.content {
+  width: 70%;
+}
+.sidebar {
+  width: 30%;
+}

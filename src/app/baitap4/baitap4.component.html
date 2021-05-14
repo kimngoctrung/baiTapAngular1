@@ -1,0 +1,30 @@
+<div class="card text-left">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1>Register Form</h1>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input #fullUserName [(ngModel)]="userID" type="text" class="form-control" name="" id=""
+                        aria-describedby="helpId" placeholder="">
+
+                </div>
+                <div class="form-group">
+                    <label for="">FullName</label>
+                    <input [(ngModel)]="email" type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                        placeholder="">
+
+                </div>
+                <button (click)="bindingData(fullUserName)" class="btn btn-warning">Submit</button>
+                <div>
+                    <p>Email:{{userID}}</p>
+                    <p>userID:{{email}}</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>

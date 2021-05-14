@@ -1,0 +1,14 @@
+<!-- INTERPOLATION LA {{}} -->
+<div class="container">
+    <h1>Name:{{fullName}}</h1>
+    <h1>Age:{{age}}</h1>
+    <!-- PROPERTY BINDING -->
+    <!-- <input style="width: 60%" [value]="email" type="text" name="" id=""> -->
+    <img class="mt-2 w-50 d-block" [src]="avatar" />
+    <!-- EVNET BINDING -->
+    <button (click)="showMessages('Đẹp Trai Vãi')" class="mt-2 btn btn-outline-info">Show Message</button>
+    <input style="width: 60%" [value]="email" [(ngModel)]="email" type="text" name="" id="">
+    <button (click)="inCreaseAge()" class="btn btn-danger">Increase Age</button>
+    {{email}}
+    <!-- //Local Reference -->
+</div>

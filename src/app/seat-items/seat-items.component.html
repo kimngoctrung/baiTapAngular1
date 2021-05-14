@@ -1,0 +1,3 @@
+<button (click)="onSelectSeat()" [disabled]="seat.TrangThai"
+    [ngClass]="{ 'btn-danger': seat.TrangThai, 'btn-success': isbooKing }"
+    class="btn btn-secondary btn-seat m-3">{{seat.SoGhe}}</button>
